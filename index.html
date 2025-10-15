@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Live news feed with search and categories." />
+</head>
+<body>
+  <nav>
+    <div class="main-nav container flex">
+      <a href="#" id="home-link" class="company-logo" aria-label="Go to home">
+        <!-- Ensure this file exists at the project root. Space is URL-encoded. -->
+        <img src="./assets/logo.png" alt="News 24 Live Streaming logo" />
+      </a>
+
+      <div class="nav-links">
+        <ul class="flex" id="nav-list" role="tablist" aria-label="News categories">
+          <li class="hover-link nav-item" data-query="sports" role="tab" tabindex="0">Sports</li>
+          <li class="hover-link nav-item" data-query="india" role="tab" tabindex="0">Today News</li>
+          <li class="hover-link nav-item" data-query="politics" role="tab" tabindex="0">Politics</li>
+        </ul>
+      </div>
+
+      <form class="search-bar flex" id="search-form" role="search" aria-label="Search news">
+        <input id="search-input" type="text" class="news-input" placeholder="e.g. Cricket News" aria-label="Search query"/>
+        <button id="search-button" class="search-button" type="submit" aria-label="Search">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div id="status" class="status hidden" role="status" aria-live="polite"></div>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </div>
+  </main>
+
+  <template id="template-news-card">
+    <article class="card" tabindex="0">
+      <div class="card-header">
+        <img src="https://via.placeholder.com/400x200?text=No+Image" alt="news image" id="news-img" />
+      </div>
+      <div class="card-content">
+        <h3 id="news-title">News Title</h3>
+        <h6 class="news-source" id="news-source">Source • Date</h6>
+        <p class="news-desc" id="news-desc">Description of the article will appear here.</p>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
