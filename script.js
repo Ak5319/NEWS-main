@@ -1,7 +1,4 @@
-// NEWS PORTAL ENHANCED
-
-// IMPORTANT: Replace with your own NewsAPI.org key for production.
-// Keeping your existing key so this runs immediately.
+// NEWS PORTAL 
 
 const API_KEY = "3757f077d5ab4206a21f24d37bb17c80";
 const BASE_URL = "https://newsapi.org/v2/everything?q=";
@@ -215,3 +212,4 @@ function clearStatus() {
   statusBox.textContent = "";
   statusBox.classList.add("hidden");
 }
+
